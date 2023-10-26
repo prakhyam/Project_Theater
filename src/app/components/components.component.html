@@ -1,0 +1,74 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<style>
+    .section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+   
+    
+    .carousel-caption {
+        color: #FFD700;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+    .carousel-title{
+        position: relative;
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+    .carousel-description{
+       
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .custom-carousel img {
+        width: 100%;
+        height: 700px;
+        position: relative;
+       
+    }
+</style>
+
+<div class="wrapper">
+    <div class="page-header clear-filter" style="background-color: rgba(203, 37, 37, 0.76);">
+        <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/bg_img.jpeg');"></div>
+        <div class="container">
+            <div class="content-center brand">
+                <img class="n-logo" src="" alt="">
+                <h1 class="h1-seo"><strong>NACHO</strong></h1>
+                <h3>Welcome to the Movie Experience</h3>
+            </div>
+        </div>
+    </div>
+
+
+      <div class="section" id="carousel">
+        <div class="container">
+          <ngb-carousel class="custom-carousel">
+            <ng-template ngbSlide *ngFor="let movie of movies">
+              <div class="image-overlay">
+                <img class="d-block" [src]="movie.imageUrl" alt="{{ movie.title }}"style="filter: brightness(0.6);">
+                <div class="col-md-4">
+                <div class="carousel-caption">
+                  <h5 class="carousel-title"><b>{{ movie.title }}</b></h5>
+                  <p class="carousel-description">{{ movie.description }}</p>
+                  <div class="carousel-buttons">
+                    <a [href]="movie.buttonLink" class="btn btn-primary">{{ movie.buttonText }}</a>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+      </div>
+      
+ 
