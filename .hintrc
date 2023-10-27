@@ -13,7 +13,13 @@
       }
     ],
     "disown-opener": "off",
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "axe/text-alternatives": [
+      "default",
+      {
+        "image-alt": "off"
+      }
+    ]
   },
   "browserslist": [
     "defaults",
